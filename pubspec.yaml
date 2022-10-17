@@ -1,0 +1,80 @@
+name: moffice_web
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.5 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations: # Add this line
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  table_calendar: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # create dev server
+  build_runner: ^2.1.1
+  build_web_compilers: ^3.0.0
+  # convention code
+  flutter_lints: ^2.0.0
+  responsive_framework: ^0.2.0
+  #flutter bloc
+  flutter_bloc: ^8.1.1  #equal
+  equatable: ^2.0.3
+  #for call api
+  dio: ^4.0.6
+  http: ^0.13.4
+  #for share preference
+  shared_preferences: ^2.0.14
+  #loading
+  loading_indicator: ^3.0.3
+  flutter_easyloading: ^3.0.3
+  #show toast
+  fluttertoast: ^8.0.9
+  #dependency injection
+  get_it: ^7.2.0
+  #config env
+  flutter_dotenv: ^5.0.2
+  # Encypt data
+  encrypt: ^5.0.1
+  intl: ^0.17.0
+  basic_utils: ^4.2.1
+  # path
+  path_provider: ^2.0.10
+  # router_management
+  go_router: ^4.1.1
+  # font google
+  google_fonts: ^3.0.1
+  #resize text
+  auto_size_text: ^3.0.0
+  syncfusion_flutter_pdfviewer: ^20.2.40-beta
+  #svg
+  flutter_svg: ^1.1.4
+  carousel_slider: ^4.1.1
+  easy_dynamic_theme: ^2.2.0
+  enum_to_string: ^2.0.1
+  unicons: ^2.1.0
+  gap: ^2.0.0
+  universal_html: ^2.0.8
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/svg/
+    - assets/languages/
+    - lib/configuration/.env
+
+  fonts:
+    - family: AvertaStdCY
+      fonts:
+        - asset: assets/fonts/AvertaStdCY/AvertaStdCY-Regular.otf

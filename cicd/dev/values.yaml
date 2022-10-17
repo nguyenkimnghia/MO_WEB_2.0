@@ -1,0 +1,56 @@
+# So luong pod duoc tao
+replicaCount: 1
+
+# Khai bao service
+service:
+  type: NodePort
+  nodePort: 10842
+  port: 10842
+
+# Khai bao hostnames
+hostAliases:
+  10.1.16.241: devbpm.mbbank.com.vn
+   
+# Khai bao su dung configmap
+configMaps:
+
+# Khai bao su dung PVC
+pvc: false
+   
+# Khai bao volumeMount
+volumeMountsMap:
+  mountPathconfig: /deployment/config
+  mountPathpodinfo: /deployment/podinfo   
+  
+#Khai bao tai nguyen su dung cho pod
+resources:
+  limits:
+    cpu : 1
+    memory: 2Gi
+  requests:
+    memory: 1Gi
+
+# Khai bao promethus
+promethus: false
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: /view/actuator/prometheus
+  prometheus.io/port: "10842"
+  
+# Khai bao HealthCheck
+healthCheck: false
+
+# Khai bao bien moi truong 
+
+nodeName: 
+# So lan deploy Helm
+numberHelm: H1
+
+# Thong tin image
+image:
+  repository: image_version
+  pullPolicy: Always
+
+# Khai bao secret-registry harbor
+imagePullSecrets:
+ - name: harbor-secret-registry
